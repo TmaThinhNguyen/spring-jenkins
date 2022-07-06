@@ -13,8 +13,8 @@ class DemoJenkinsApplicationTests {
 	public static Logger logger = LoggerFactory.getLogger(DemoJenkinsApplication.class);
 
 	@Test
-	public void  contextLoads() {
-		logger.info("Test case excuting..."); 
+	public  contextLoads() {
+		logger.info("Test case excuting...");
 		assertEquals(true, true);
 	}
 
