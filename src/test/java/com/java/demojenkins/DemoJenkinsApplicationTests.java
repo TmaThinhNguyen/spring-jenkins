@@ -15,7 +15,6 @@ class DemoJenkinsApplicationTests {
 	@Test
 	public void contextLoads() {
 		logger.info("Test case excuting...");
-		logger.info("Test case second excuting....");
 		assertEquals(true, true);
 	}
 
