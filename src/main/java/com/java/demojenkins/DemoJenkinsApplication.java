@@ -13,7 +13,7 @@ public class DemoJenkinsApplication {
 	public static Logger logger = LoggerFactory.getLogger(DemoJenkinsApplication.class);
 
 	@PostConstruct
-	public void intt(){
+	public void int(){
 		logger.info("Application start...");
 	}
 
