@@ -12,10 +12,10 @@ public class DemoJenkinsApplication {
 
 	public static Logger logger = LoggerFactory.getLogger(DemoJenkinsApplication.class);
 
-	@PostConstruct
-	public void int(){
-		logger.info("Application start...");
-	}
+	// @PostConstruct
+	// public void int(){
+	// 	logger.info("Application start...");
+	// }
 
 	public static void main(String[] args) {
 

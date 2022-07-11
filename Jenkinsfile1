@@ -1,0 +1,37 @@
+stages{
+    stage('Clone'){
+        steps{
+            git branch: 'master'
+            url: git@github.com:TmaThinhNguyen/spring-jenkins.git
+        }
+    }
+    stage('Build'){
+        steps{
+        sh '''
+        docker build -t myawesomeapp:${BUILD_NUMBER}
+        '''
+        }
+    }
+    stage('Test'){
+        steps{
+        sh '''
+        docker run -it myawesomeapp:${BUILD_NUMBER}
+        curl localhost:5000
+        '''
+        }
+    }
+    stage('Package'){
+        steps{
+        sh '''
+        docker push devopsjourney/myaweomeapp:${BUILD_NAME}
+        '''
+        }
+    }
+    stage('Deploy'){
+        steps{
+        sh '''
+        echo "DevOps to do: Add some 1337 deploy logic here "
+        '''
+        }
+    }
+}
